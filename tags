@@ -1,0 +1,14 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+Conclusion	basis.tex	/^\\section{Conclusion}$/;"	s
+Introduction	basis.tex	/^\\IEEEraisesectionheading{\\section{Introduction}\\label{sec:introduction}}$/;"	s
+Proof of the First Zonklar Equation	basis.tex	/^\\section{Proof of the First Zonklar Equation}$/;"	s
+Subsection Heading Here	basis.tex	/^\\subsection{Subsection Heading Here}$/;"	u	section:Introduction
+Subsubsection Heading Here	basis.tex	/^\\subsubsection{Subsubsection Heading Here}$/;"	b	subsection:Introduction""Subsection Heading Here
+sec:introduction	basis.tex	/^\\IEEEraisesectionheading{\\section{Introduction}\\label{sec:introduction}}$/;"	l

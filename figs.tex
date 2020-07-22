@@ -1,0 +1,58 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{math}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathreplacing, matrix}
+\usetikzlibrary{pgfplots.statistics}
+\pgfplotsset{compat=1.16}
+
+\pgfplotscreateplotcyclelist{mycycle}{
+black, fill=red!40,every mark/.append style={fill=blue!80!black},mark=*\\
+}
+
+\begin{document}
+    
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+height=9cm,
+width=16cm,
+xlabel=Number of scenarios,
+ylabel=Opt number of batteries,
+ylabel near ticks,
+]
+
+\foreach \i in {0,...,8}{
+    \addplot[blue] table [x=w, y=\i, col sep=comma] {img/data.csv};
+    \label{plot:\i};
+}
+%\addlegendentry{$N = 15$}
+\foreach \i in {9,...,17}{
+    \addplot[red] table [x=w, y=\i, col sep=comma] {img/data.csv};
+    \label{plot:\i};
+}
+%\addlegendentry{$N = 30$}
+\foreach \i in {18,...,26}{
+    \addplot[black] table [x=w, y=\i, col sep=comma] {img/data.csv};
+    \label{plot:\i};
+}
+%\addlegendentry{$N = 45$}
+
+ \coordinate (legend) at (axis description cs:0.5,1.1);
+
+\end{axis}
+\matrix [
+            draw,
+            matrix of nodes,
+        ] at (legend) {
+            $N = 15$ \ref{plot:0} & $N=30$ \ref{plot:9}  & $N=45$ \ref{plot:18}  \\
+        };
+\end{tikzpicture}
+  \caption{Changes in the optimal battery size in a community}
+  \label{fig:stoc_change}
+\end{figure}
+
+\end{document}

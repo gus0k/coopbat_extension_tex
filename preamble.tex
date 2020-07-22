@@ -1,0 +1,79 @@
+\usepackage{optidef}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+\usepackage{url}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{math}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathreplacing, matrix}
+\usetikzlibrary{pgfplots.statistics}
+\pgfplotsset{compat=1.16}
+
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\Bat}{\mathcal{B}}
+\newcommand{\Ep}{E^+}
+\newcommand{\Ene}{E^-}
+\newcommand{\ep}{e^+}
+\newcommand{\ene}{e^-}
+\newcommand{\pricelow}{p^l}
+\newcommand{\pricehigh}{p^h}
+\newcommand{\costbat}{\pi}
+\newcommand{\bat}{B}
+\newcommand{\ramp}{\delta}
+\newcommand{\cons}{x}
+\newcommand{\coef}{\gamma}
+
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+
+\newtheorem{assumption}{Assumption}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{lemma}{Lemma}
+\newtheorem{mydef}{Definition}
+\newtheorem{notation}{Notation}
+\newtheorem{observation}{Observation}
+\newtheorem{obs}{Observation}
+\newtheorem{proposition}{Proposition}
+\newtheorem{prop}{Proposition} \newtheorem{thm}{Theorem}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}[section]
+
+\newcommand{\ccd}{c_{cd}}
+\newcommand{\acd}{A_{cd}}
+\newcommand{\bcd}{b_{cd}}
+\newcommand{\ccs}{c_{cs}}
+\newcommand{\acs}{A_{cs}}
+\newcommand{\bcs}{b_{cs}}
+%%
+%% Submission ID.
+%% Use this when submitting an article to a sponsored event. You'll
+%% receive a unique submission ID from the organizers
+%% of the event, and this ID should be used as the parameter to this command.
+%%\acmSubmissionID{123-A56-BU3}
+
+%%
+%% The majority of ACM publications use numbered citations and
+%% references.  The command \citestyle{authoryear} switches to the
+%% "author year" style.
+%%
+%% If you are preparing content for an event
+%% sponsored by ACM SIGGRAPH, you must use the "author year" style of
+%% citations and references.
+%% Uncommenting
+%% the next command will enable that style.
+%%\citestyle{acmauthoryear}
+
+%%
+%% end of the preamble, start of the body of the document source.
+
+
+\pgfplotscreateplotcyclelist{mycycle}{
+black, fill=red!40,every mark/.append style={fill=blue!80!black},mark=*\\
+}
